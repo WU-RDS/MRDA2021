@@ -17,14 +17,13 @@ output:
 
 In this section, we provide answers to questions that students of previous cohorts encountered. We grouped the answers by topic and hope that you will find the answers useful.  
 
-
 ## Common error messages {-}
 
 ### A general note on error messages {-}
 
 <img src="./images/off_on.jpg" width="40%" style="display: block; margin: auto;" />
 
-We usually load data into a `data.frame` in our R Session (e.g., from a CSV file using `data <- read.csv("file.csv")`). It is important to note that this `data.frame` is not the original data file, but just a copy of the file that is stored on the hard drive. This means that any changes we make to the `data.frame` are **not** persistent/permanent and are **not** written to the original file (unless it is overwritten explicitly by using e.g., `write.csv(data, "file.csv")`, which we usually don't do). Therefore, it is important to write all commands in an R/Rmd file such that we can re-run the analysis the next time we open R and reproduce the results. This also means that if you cannot solve an issue using the suggested solutions to specific error messages mentioned on this page, it is completely safe to restart R or delete variables from the Global Environment. You just have to re-run our code to get the variables and results back. Therefore, your code files should always be fully reproducible using only the R/Rmd and data files. In addition your R/Rmd files should run linearly from the first to the last line and should not depend on "jumping" back and forth. The files that you obtain from us from this course are examples of reproducible files and in case you a stuck with a problem at a certain point, you can just save the code file and run it again up until the point where you were before the error occurred.   
+We usually load data into a `data.frame` in our R Session (e.g., from a CSV file using `data <- read.csv("file.csv")`). It is important to note that this `data.frame` is not the original data file, but just a copy of the file that is stored on the hard drive. This means that any changes we make to the `data.frame` are **not** persistent/permanent and are **not** written to the original file (unless it is overwritten explicitly by using e.g., `write.csv(data, "file.csv")`, which we usually don't do). Therefore, it is important to write all commands in an R/Rmd file such that we can re-run the analysis the next time we open R and reproduce the results. This also means that if you cannot solve an issue using the suggested solutions to specific error messages mentioned on this page, it is completely safe to restart R or delete variables from the Global Environment. You just have to re-run the code to get the variables and results back. Therefore, your code files should always be fully reproducible using only the R/Rmd and data files. In addition your R/Rmd files should run linearly from the first to the last line and should not depend on "jumping" back and forth. The files that you obtain from us from this course are examples of reproducible files and in case you are stuck with a problem at a certain point, you can just save the code file and run it again up until the point where you were before the error occurred.   
 
 This means that a general procedure for dealing with errors that cannot be solved in any other way would be as follows:
 
@@ -32,7 +31,7 @@ This means that a general procedure for dealing with errors that cannot be solve
 2. Go back to the beginning of your code file and run it line by line (`Ctrl-Enter` in RStudio)
 3. If your error persists check the affected line for typos/differences in spelling. 
 4. If the error occurs in a function make sure you are passing the arguments correctly (see help file for the function using `?FUNCTIONNAME`)
-5. Look at all the variables in your Global Environment and make sure they are in the format you expect them to be (e.g., if a file you expect to be a data frame is really a specified as a data frame). 
+5. Look at all the variables in your Global Environment and make sure they are in the format you expect them to be (e.g., if a file you expect to be a `data.frame` is really a specified as a `data.frame`). 
 6. See the list of common error messages for more explanations below 
 7. Nothing helped: Ask in the forum. If possible with a screenshot that explains your issue, or - better yet - a [minimal reproducible example](https://community.rstudio.com/t/faq-how-to-do-a-minimal-reproducible-example-reprex-for-beginners/23061). 
 
@@ -68,10 +67,11 @@ print("hello"))
 ```
 
 ```
-## Error: <text>:1:15: Unerwartete(s) ')'
+## Error: <text>:1:15: unexpected ')'
 ## 1: print("hello"))
 ##                   ^
 ```
+
 There is one too many closing parenthesis here. 
 
 
@@ -80,10 +80,11 @@ There is one too many closing parenthesis here.
 ```
 
 ```
-## Error: <text>:1:4: Unerwartete(s) '/'
+## Error: <text>:1:4: unexpected '/'
 ## 1: 1 +/
 ##        ^
 ```
+
 The "/" symbol may not follow the "+" symbol without any additional objects.
 
 
@@ -92,10 +93,11 @@ The "/" symbol may not follow the "+" symbol without any additional objects.
 ```
 
 ```
-## Error: <text>:1:3: unerwartete numerische Konstante
+## Error: <text>:1:3: unexpected numeric constant
 ## 1: 1 2
 ##       ^
 ```
+
 The sequence with a space between numbers is not recognized by R. 
 
 
@@ -105,7 +107,7 @@ x <- 3
 ```
 
 ```
-## Error: <text>:2:2: unerwartetes Symbol
+## Error: <text>:2:2: unexpected symbol
 ## 1: x <- 3
 ## 2: 2x
 ##     ^
@@ -134,10 +136,10 @@ mean$value
 ```
 
 ```
-## Error in mean$value: Objekt des Typs 'closure' ist nicht indizierbar
+## Error in mean$value: object of type 'closure' is not subsettable
 ```
 
-instead of (i.e., correcting for the missing "s" to identify the data frame by its name)
+instead of (i.e., correcting for the missing "s" to identify the `data.frame` by its name)
 
 
 ```r
@@ -158,7 +160,7 @@ summary(aov)[[1]]
 ```
 
 ```
-## Error in object[[i]]: Objekt des Typs 'closure' ist nicht indizierbar
+## Error in object[[i]]: object of type 'closure' is not subsettable
 ```
 
 Make sure all the relevant code is run first:
@@ -211,7 +213,7 @@ mean(xdf$a, xdf$group)
 ```
 
 ```
-## Error in mean.default(xdf$a, xdf$group): 'trim' muss nummerisch sein und Länge 1 haben
+## Error in mean.default(xdf$a, xdf$group): 'trim' must be numeric of length one
 ```
 
 When you get this error make sure your data is in the format you expect it to be (e.g., using the `str` function). And that missing values (i.e., NA) are handles appropriately. 
@@ -244,7 +246,7 @@ This error occurs if a function name is either misspelled or some packages have 
 
 
 ```
-## Error in detach(package:ggplot2): ungültiges 'name'Argument
+## Error in detach(package:ggplot2): invalid 'name' argument
 ```
 
 
@@ -253,7 +255,7 @@ ggplot(data)
 ```
 
 ```
-## Error in ggplot(data): konnte Funktion "ggplot" nicht finden
+## Error in ggplot(data): could not find function "ggplot"
 ```
 
 If you are not sure which package provides a given function, try running:
@@ -273,7 +275,7 @@ x[1,1]
 ```
 
 ```
-## Error in x[1, 1]: falsche Anzahl von Dimensionen
+## Error in x[1, 1]: incorrect number of dimensions
 ```
 
 
@@ -308,7 +310,7 @@ dim(data.frame(x))
 ## [1] 3 1
 ```
 
-For vectors `dim` will return `NULL`.
+For vectors `dim` will return `NULL`. In that case you can use `length` instead.
 
 
 ## Installation of R packages {-}
@@ -435,7 +437,7 @@ glm(char_y ~ x , data = dat, family=binomial())
 ```
 
 ```
-## Error in weights * y: nicht-numerisches Argument für binären Operator
+## Error in weights * y: non-numeric argument to binary operator
 ```
 
 ## General settings and options {-}
@@ -503,7 +505,7 @@ See [ggplotcolors.R](https://raw.githubusercontent.com/WU-RDS/MRDA2021/c3d8eb74b
 
 ### Why are some histograms displayed differently? {-}
 
-When plotting a histogram, there is an important parameter called `binwidth` which controls the range over which the number of observations are counted in each bin. If it is set to a too low value, each bin will only have very few observations and we get a large number of bins. If it is set to a value that is too high, we lump many observations together and get very few bins (in the extreme case only one). You may have to play around with different values to find the appropriate binwidth for your plot.  
+When plotting a histogram, there is an important parameter called `binwidth` which controls the range over which the number of observations are counted in each bin. If it is set to a too low value, each bin will only have very few observations and we get a large number of bins. If it is set to a value that is too high, we lump many observations together and get very few bins (in the extreme case only one). You may have to play around with different values to find the appropriate `binwidth` for your plot. You can also try omitting the `binwidth` argument and R will try to find an appropriate one automatically.  
 
 See [histogrambins.R](https://raw.githubusercontent.com/WU-RDS/MRDA2021/main/QAscripts/histogrambins.R) for some examples.
 
@@ -593,7 +595,7 @@ y
 ## Levels: no yes maybe
 ```
 
-In this case, you can always go back and re-run the code creating the factor variable from its original source if you have overwritten it accidentally. Otherwise you would need to re-run the entire code to get the original formating of the variable back. 
+In this case, you can always go back and re-run the code creating the factor variable from its original source if you have overwritten it accidentally. Otherwise you would need to re-run the entire code to get the original formatting of the variable back. 
 
 **3. Common mistake:** converting from `factor` to `integer`/`numeric` directly:
 
@@ -681,11 +683,11 @@ In an Rmd document, there are 3 different environments, <a name="rchunk"></a>
 
 **1. R-code** is enclosed in three ticks followed by \{r, [chunk-options](https://rmarkdown.rstudio.com/lesson-3.html#chunk-options)\} where the chunk options can include configuration for printing code and output as well as figures e.g.
 
-> \```{r, echo = TRUE, warnings = FALSE}
-> 
-> print("Hello R!)
-> 
-> ```
+    `​``{r, echo = TRUE, warnings = FALSE}
+     print("Hello R!)
+    ```
+    
+
 
 
 ```r
