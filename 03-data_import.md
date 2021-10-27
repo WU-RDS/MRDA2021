@@ -242,13 +242,6 @@ An even more convenient way to obtain data from web APIs is to use existing R pa
 
 ```r
 library(gtrendsR)
-```
-
-```
-## Warning: Paket 'gtrendsR' wurde unter R Version 4.0.5 erstellt
-```
-
-```r
 # specify search term, area, source and time
 # frame
 google_trends <- gtrends("data science", geo = c("US"),
