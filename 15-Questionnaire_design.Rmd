@@ -1123,7 +1123,6 @@ gender_sow <- gender_sow[!is.na(gender_sow$gender), ]
 ggplot(gender_sow, aes(x = gender, y = points, fill = gender)) +
   geom_boxplot() +
   theme_bw() +
-  theme(panel.grid.major.x = element_blank()) +
   facet_wrap(~type, scales = "free_y") +
   xlab("") +
   scale_fill_discrete_qualitative(palette = "Dynamic") 
@@ -1139,7 +1138,6 @@ car_gender_mean <- aggregate(. ~ gender, data = car_gender, mean)
 names(car_gender_mean) <- c("gender", q6_answers)
 ggRadar(car_gender_mean, aes(color = gender) ) + 
   theme_bw() + 
-  theme(axis.text.x = element_text(angle = c(-30,-50,-90,0,0,0,90,45,10))) +
   scale_color_discrete_qualitative(palette = "Dynamic") 
 ```
 
