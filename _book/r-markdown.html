@@ -101,7 +101,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -114,7 +114,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -383,6 +383,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.1" data-path="faq.html"><a href="faq.html#common-error-messages"><i class="fa fa-check"></i><b>12.1</b> Common error messages</a>
 <ul>
 <li class="chapter" data-level="" data-path="faq.html"><a href="faq.html#a-general-note-on-error-messages"><i class="fa fa-check"></i>A general note on error messages</a></li>
+<li class="chapter" data-level="12.1.1" data-path="faq.html"><a href="faq.html#errors-warnings-and-messages"><i class="fa fa-check"></i><b>12.1.1</b> Errors, warnings, and messages</a></li>
 <li class="chapter" data-level="" data-path="faq.html"><a href="faq.html#error-in-filefile-rt-cannot-open-the-connection"><i class="fa fa-check"></i>Error in file(file, “rt”): cannot open the connection</a></li>
 <li class="chapter" data-level="" data-path="faq.html"><a href="faq.html#error-unexpected-symbol-in-call"><i class="fa fa-check"></i>Error: unexpected ‘SYMBOL’ in “CALL”</a></li>
 <li class="chapter" data-level="" data-path="faq.html"><a href="faq.html#error-in-call-object-of-type-closure-is-not-subsettable"><i class="fa fa-check"></i>Error in CALL : object of type ‘closure’ is not subsettable</a></li>
@@ -551,7 +552,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="r-code" class="section level3 unnumbered hasAnchor">
 <h3>R-Code<a href="r-markdown.html#r-code" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>R-code is contained in so called “chunks.” These chunks always start with three backticks and <code>r</code> in curly braces (<code></code>{r} <code>) and end with three backticks (</code> <code></code>). Optionally, parameters can be added after the <code>r</code> to influence how a chunk behaves. Additionally, you can also give each chunk a name. Note that these have to be <strong>unique</strong>, otherwise R will refuse to knit your document.</p>
+<p>R-code is contained in so called “chunks”. These chunks always start with three backticks and <code>r</code> in curly braces (<code></code>{r} <code>) and end with three backticks (</code> <code></code>). Optionally, parameters can be added after the <code>r</code> to influence how a chunk behaves. Additionally, you can also give each chunk a name. Note that these have to be <strong>unique</strong>, otherwise R will refuse to knit your document.</p>
 <div id="global-and-chunk-options" class="section level4 unnumbered hasAnchor">
 <h4>Global and chunk options<a href="r-markdown.html#global-and-chunk-options" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The first chunk always looks as follows</p>
@@ -598,7 +599,7 @@ plot(dist~speed, cars)
  f_1(\omega) = \frac{\sigma^2}{2 \pi},\ \omega \in[-\pi, \pi]
 $$</code></pre>
 <p><span class="math display">\[
- f_1(\omega) = \frac{\sigma^2}{2 \pi},\ \omega \in[-\pi, \pi]
+f_1(\omega) = \frac{\sigma^2}{2 \pi},\ \omega \in[-\pi, \pi]
 \]</span></p>
 <p>(for those interested this is the spectral density of <a href="https://en.wikipedia.org/wiki/White_noise">white noise</a>)</p>
 <p>Including inline mathematical notation is done with a single <code>$</code> symbol.</p>
@@ -837,13 +838,13 @@ Code
 <ol style="list-style-type: decimal">
 <li>The accounting department asks you to provide an estimate of the average revenue per customer. Compute the 95% confidence interval for the mean revenue per customer and provide an interpretation of the interval.<br />
 </li>
-<li>You run an A/B-Test on your website that aims at analyzing a new personalization feature to stimulate sales. To test the effect of this feature on revenues (variable: “revenue”), you randomly assign users either to a control group (status quo), or to a treatment group (the new personalization feature). The information regarding which group a customer has been assigned to is stored in the variable “exp_group.” Is there a significant difference regarding the revenue between customers from the control and treatment groups? Please include the effect size Cohen’s d and the confidence intervals in your report.</li>
+<li>You run an A/B-Test on your website that aims at analyzing a new personalization feature to stimulate sales. To test the effect of this feature on revenues (variable: “revenue”), you randomly assign users either to a control group (status quo), or to a treatment group (the new personalization feature). The information regarding which group a customer has been assigned to is stored in the variable “exp_group”. Is there a significant difference regarding the revenue between customers from the control and treatment groups? Please include the effect size Cohen’s d and the confidence intervals in your report.</li>
 <li>After conducting the experiment described above, you would like to find out how to improve the user experience with regard to the new personalization feature. Thus, you expose the same customers from the treatment group from the previous experiment to an alternative page layout and record the time spend on the website after this change had been implemented (variable: “time_on_site_1”). Did the alternative page layout lead to a significant increase regarding the time your customers spend on your website? Please include the effect size Cohen’s d and confidence intervals in your report.</li>
 <li>Assume that you plan to run an experiment with two groups to test two different advertising strategies. You randomly assign website visitors to the control and experimental conditions and your goal is to test if there is a significant difference between the groups regarding the number of products they purchase from your store. How many users would you need to include in each group of your experiment if you assume the effect size to be 0.1 for a significance level of 0.05 and power of 0.8?<br />
 </li>
 <li>You are interested in analyzing the effects of different types of online advertising (variable: “retargeting”) on revenue per customer (variable: “revenue”). You conduct an experiment in which your customers were exposed to different types of online advertising (randomly assigned) and now you wish to analyze the results. Are there significant differences between the three groups? In your analysis, please inspect if there is an overall difference between the three groups first and then test for differences between the individual groups.<br />
 </li>
-<li>After the last checkout, you conduct a short survey and obtain data on the Net Promoter Score. The question asks “How likely would you be to recommend [us] to a friend or colleague.” The response is a value from 0 [very unlikely] to 10 [very likely]. Did the new personalization feature from the experiment in question 2 (variable: “exp_group”) significantly influenced the ratings you obtain for the net promoter score (variable: “nps”)?</li>
+<li>After the last checkout, you conduct a short survey and obtain data on the Net Promoter Score. The question asks “How likely would you be to recommend [us] to a friend or colleague”. The response is a value from 0 [very unlikely] to 10 [very likely]. Did the new personalization feature from the experiment in question 2 (variable: “exp_group”) significantly influenced the ratings you obtain for the net promoter score (variable: “nps”)?</li>
 <li>The goal of the personalization feature was to trigger conversions (i.e., stimulate purchases). Thus, you recorded whether a click on the personalization feature lead to a purchase (variable: “conversion”). Please test the effect of the personalization feature on the conversion rate.</li>
 </ol>
 <p>When answering the questions, please remember to address the following points, where appropriate:</p>
@@ -857,7 +858,7 @@ Code
 </li>
 <li>Finally, don’t forget to report your research conclusion</li>
 </ul>
-<p>When you are done with your analysis, click on “Knit to HTML” button above the code editor. This will create a HTML document of your results in the folder where the “assignment3.Rmd” file is stored. Open this file in your Internet browser to see if the output is correct. If the output is correct, submit the HTML file via Learn@WU. The file name should be “assignment2_studendID_lastname.html.”</p>
+<p>When you are done with your analysis, click on “Knit to HTML” button above the code editor. This will create a HTML document of your results in the folder where the “assignment3.Rmd” file is stored. Open this file in your Internet browser to see if the output is correct. If the output is correct, submit the HTML file via Learn@WU. The file name should be “assignment2_studendID_lastname.html”.</p>
 <p><strong>Load and inspect data</strong></p>
 <p>Let´s load the data first and inspect the contained variables:</p>
 <div class="sourceCode" id="cb763"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb763-1"><a href="r-markdown.html#cb763-1" aria-hidden="true" tabindex="-1"></a>customer_data <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;https://raw.githubusercontent.com/WU-RDS/MRDA2021/main/Assignments/Assignment2/assignment2_data.dat&quot;</span>,</span>
@@ -1226,15 +1227,15 @@ dynamic regargeting vs. generig retargeting</p>
 ## 
 ## Fit: aov(formula = revenue ~ retargeting, data = customer_data)
 ## 
-## Quantile = 2.3559
+## Quantile = 2.3561
 ## 95% family-wise confidence level
 ##  
 ## 
 ## Linear Hypotheses:
 ##                                                Estimate lwr      upr     
-## generic retargeting - no retargeting == 0      198.4986 -73.2197 470.2169
-## dynamic retargeting - no retargeting == 0      730.4972 465.7736 995.2208
-## dynamic retargeting - generic retargeting == 0 531.9986 255.7814 808.2157</code></pre>
+## generic retargeting - no retargeting == 0      198.4986 -73.2386 470.2358
+## dynamic retargeting - no retargeting == 0      730.4972 465.7552 995.2391
+## dynamic retargeting - generic retargeting == 0 531.9986 255.7622 808.2349</code></pre>
 <div class="sourceCode" id="cb812"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb812-1"><a href="r-markdown.html#cb812-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The mar parameter changes the margins around</span></span>
 <span id="cb812-2"><a href="r-markdown.html#cb812-2" aria-hidden="true" tabindex="-1"></a><span class="co"># created plots. This is done so the labels on</span></span>
 <span id="cb812-3"><a href="r-markdown.html#cb812-3" aria-hidden="true" tabindex="-1"></a><span class="co"># the side of the Tukey plot are visible</span></span>
@@ -1367,7 +1368,7 @@ First, we will recode the relevant variables into factors and give them more des
 <ol start="5" style="list-style-type: decimal">
 <li>What sales quantity would you predict based on your model for a product when the marketing activities are planned as follows: TV: 150 thsd. €, Online: 26 thsd. €, Radio: 15 thsd. €? Please provide the equation you used to make the prediction.</li>
 </ol>
-<p>When you are done with your analysis, click on “Knit to HTML” button above the code editor. This will create a HTML document of your results in the folder where the “assignment3.Rmd” file is stored. Open this file in your Internet browser to see if the output is correct. If the output is correct, submit the HTML file via Learn@WU. The file name should be “assignment3_studendID_name.html.”</p>
+<p>When you are done with your analysis, click on “Knit to HTML” button above the code editor. This will create a HTML document of your results in the folder where the “assignment3.Rmd” file is stored. Open this file in your Internet browser to see if the output is correct. If the output is correct, submit the HTML file via Learn@WU. The file name should be “assignment3_studendID_name.html”.</p>
 <p><strong>Load data</strong></p>
 <div class="sourceCode" id="cb825"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb825-1"><a href="r-markdown.html#cb825-1" aria-hidden="true" tabindex="-1"></a>sales_data <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">&quot;https://raw.githubusercontent.com/IMSMWU/MRDA2018/master/data/assignment4.dat&quot;</span>,</span>
 <span id="cb825-2"><a href="r-markdown.html#cb825-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)  <span class="co">#read in data</span></span>

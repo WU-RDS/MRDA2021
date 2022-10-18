@@ -20,7 +20,6 @@ knitr::opts_chunk$set(echo = TRUE, error = TRUE, warning = FALSE, message = FALS
 
 In this section, we provide answers to questions that students of previous cohorts encountered. We grouped the answers by topic and hope that you will find the answers useful.  
 
-
 ## Common error messages
 
 ```{r ,echo=FALSE,out.width = '40%',fig.align='center',fig.cap = ""}
@@ -42,6 +41,10 @@ This means that a general procedure for dealing with errors that cannot be solve
 7. Nothing helped: Ask in the forum. If possible with a screenshot that explains your issue, or - better yet - a [minimal reproducible example](https://community.rstudio.com/t/faq-how-to-do-a-minimal-reproducible-example-reprex-for-beginners/23061). 
 
 In the following capitalized words are stand-ins for specific calls/symbols/functions.
+
+### Errors, warnings, and messages
+
+Not all messages we are shown in R are *errors*. When we get an error at least one of the lines we ran could not be run at all and we should go back and try to fix the error. However, there are also *warnings*. Warnings start with **Warning message:...** and indicate that something has gone wrong but the code could still be executed. Usually we can ignore warnings but be cautious and make sure the output of the code resulting in a warning is correct. An example of a situation in which we get a warning is when we try to calculate the `mean` of a character vector. The code will still work and return an r`NA` since the mean is not defined for characters. Finally, there are also messages which inform us that something is happening (e.g., during a long computation) and we can safely ignore them.
 
 ### Error in file(file, "rt"): cannot open the connection {-}
 
