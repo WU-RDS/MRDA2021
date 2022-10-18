@@ -511,29 +511,29 @@ pc1
 ## Q22  0.08  0.15  0.09  0.01  0.04 -0.06  0.02  0.00  0.01 -0.01  0.01  1
 ## Q23 -0.01 -0.07 -0.12 -0.06 -0.03  0.05 -0.03  0.01 -0.01 -0.02  0.00  1
 ##           u2 com
-## Q01 -1.1e-15 6.0
-## Q02 -3.8e-15 6.1
-## Q03  6.7e-16 4.4
-## Q04 -1.1e-15 4.9
-## Q05 -6.7e-16 5.2
-## Q06 -4.4e-16 4.4
-## Q07 -4.4e-16 4.1
-## Q08 -1.3e-15 5.7
-## Q09 -1.3e-15 5.0
-## Q10  2.2e-16 7.7
-## Q11 -1.3e-15 4.1
-## Q12 -1.6e-15 3.8
-## Q13 -1.6e-15 4.2
-## Q14 -1.1e-15 4.3
-## Q15 -6.7e-16 5.6
-## Q16 -1.8e-15 4.0
-## Q17 -1.6e-15 4.3
-## Q18 -1.1e-15 3.4
-## Q19 -8.9e-16 3.5
-## Q20  4.4e-16 8.7
-## Q21 -2.2e-16 4.6
-## Q22  0.0e+00 7.2
-## Q23  1.1e-16 4.2
+## Q01  3.3e-16 6.0
+## Q02 -6.7e-16 6.1
+## Q03  8.9e-16 4.4
+## Q04  0.0e+00 4.9
+## Q05 -1.1e-15 5.2
+## Q06  7.8e-16 4.4
+## Q07  4.4e-16 4.1
+## Q08 -6.7e-16 5.7
+## Q09 -4.4e-16 5.0
+## Q10  1.1e-16 7.7
+## Q11  0.0e+00 4.1
+## Q12  0.0e+00 3.8
+## Q13  0.0e+00 4.2
+## Q14 -4.4e-16 4.3
+## Q15 -2.2e-16 5.6
+## Q16 -1.1e-15 4.0
+## Q17 -4.4e-16 4.3
+## Q18  0.0e+00 3.4
+## Q19  3.3e-16 3.5
+## Q20  2.2e-16 8.7
+## Q21  0.0e+00 4.6
+## Q22 -2.2e-16 7.2
+## Q23  8.9e-16 4.2
 ## 
 ##                        PC1  PC2  PC3  PC4  PC5  PC6  PC7  PC8  PC9 PC10 PC11
 ## SS loadings           7.29 1.74 1.32 1.23 0.99 0.90 0.81 0.78 0.75 0.72 0.68
@@ -1157,8 +1157,10 @@ psych::alpha(computer_fear)
 ##   raw_alpha std.alpha G6(smc) average_r S/N    ase mean   sd median_r
 ##       0.82      0.82    0.81       0.4 4.6 0.0052  3.4 0.71     0.39
 ## 
-##  lower alpha upper     95% confidence boundaries
-## 0.81 0.82 0.83 
+##     95% confidence boundaries 
+##          lower alpha upper
+## Feldt     0.81  0.82  0.83
+## Duhachek  0.81  0.82  0.83
 ## 
 ##  Reliability if an item is dropped:
 ##     raw_alpha std.alpha G6(smc) average_r S/N alpha se  var.r med.r
@@ -1204,8 +1206,10 @@ psych::alpha(statistics_fear, keys=c(1,-1,1,1,1,1,1,1))
 ##   raw_alpha std.alpha G6(smc) average_r S/N    ase mean   sd median_r
 ##       0.82      0.82    0.81      0.37 4.7 0.0053    3 0.64      0.4
 ## 
-##  lower alpha upper     95% confidence boundaries
-## 0.81 0.82 0.83 
+##     95% confidence boundaries 
+##          lower alpha upper
+## Feldt     0.81  0.82  0.83
+## Duhachek  0.81  0.82  0.83
 ## 
 ##  Reliability if an item is dropped:
 ##      raw_alpha std.alpha G6(smc) average_r S/N alpha se  var.r med.r
@@ -1253,8 +1257,10 @@ psych::alpha(math_fear)
 ##   raw_alpha std.alpha G6(smc) average_r S/N    ase mean   sd median_r
 ##       0.82      0.82    0.75       0.6 4.5 0.0062  3.7 0.75     0.59
 ## 
-##  lower alpha upper     95% confidence boundaries
-## 0.81 0.82 0.83 
+##     95% confidence boundaries 
+##          lower alpha upper
+## Feldt     0.81  0.82  0.83
+## Duhachek  0.81  0.82  0.83
 ## 
 ##  Reliability if an item is dropped:
 ##     raw_alpha std.alpha G6(smc) average_r S/N alpha se var.r med.r
@@ -1287,8 +1293,10 @@ psych::alpha(peer_evaluation)
 ##   raw_alpha std.alpha G6(smc) average_r S/N   ase mean   sd median_r
 ##       0.57      0.57    0.53      0.21 1.3 0.013  3.4 0.65     0.23
 ## 
-##  lower alpha upper     95% confidence boundaries
-## 0.54 0.57 0.6 
+##     95% confidence boundaries 
+##          lower alpha upper
+## Feldt     0.54  0.57   0.6
+## Duhachek  0.54  0.57   0.6
 ## 
 ##  Reliability if an item is dropped:
 ##     raw_alpha std.alpha G6(smc) average_r  S/N alpha se  var.r med.r
@@ -1348,8 +1356,10 @@ psych::alpha(test_data[,c("multi_1","multi_2","multi_3","multi_4")], keys=c(1,1,
 ##   raw_alpha std.alpha G6(smc) average_r S/N   ase mean   sd median_r
 ##        0.9       0.9    0.88      0.68 8.7 0.024  2.7 0.92     0.65
 ## 
-##  lower alpha upper     95% confidence boundaries
-## 0.85 0.9 0.94 
+##     95% confidence boundaries 
+##          lower alpha upper
+## Feldt     0.84   0.9  0.93
+## Duhachek  0.85   0.9  0.94
 ## 
 ##  Reliability if an item is dropped:
 ##          raw_alpha std.alpha G6(smc) average_r  S/N alpha se  var.r med.r
@@ -1400,9 +1410,9 @@ head(test_data)
 
 **(LC8.1) The goals of factor analysis are...**
 
-- [x] ...to identify underlying dimensions that explain correlations among variables.
+- [ ] ...to identify underlying dimensions that explain correlations among variables.
 - [ ] ...to identify multiplicative effects in a linear regression.
-- [x] ...to identify a smaller set of uncorrelated variables.
+- [ ] ...to identify a smaller set of uncorrelated variables.
 - [ ] ...to identify interaction terms in a linear regression.
 - [ ] None of the above 
 
@@ -1411,13 +1421,13 @@ head(test_data)
 - [ ] A reduction greater than 50% of the input variables
 - [ ] Between a third and a fourth of the input variables
 - [ ] A reduction smaller than 50% of the input variables
-- [x] None of the above 
+- [ ] None of the above 
 
 **(LC8.3) What assumptions have to be fulfilled for using factor analysis?**
 
-- [x] Variables must be in interval or ratio scale
-- [x] Existence of some underlying factor structure
-- [x] The correlation matrix must have sufficient number of correlations
+- [ ] Variables must be in interval or ratio scale
+- [ ] Existence of some underlying factor structure
+- [ ] The correlation matrix must have sufficient number of correlations
 - [ ] Variables must be measured using ordinal scales
 - [ ] None of the above
 
@@ -1425,29 +1435,29 @@ head(test_data)
 
 - [ ] Regression coefficients
 - [ ] Correlations between the variables
-- [x] Weights of a variable on a factor
-- [x] Factor loadings
+- [ ] Weights of a variable on a factor
+- [ ] Factor loadings
 - [ ] None of the above 
 
 **(LC8.5) What is the null hypothesis of the Bartlett’s test of sphericity?**
 
 - [ ] All variables are correlated in the population
 - [ ] The correlation matrix is singular
-- [x] All variables are uncorrelated in the population
-- [x] The correlation matrix is an identity matrix
+- [ ] All variables are uncorrelated in the population
+- [ ] The correlation matrix is an identity matrix
 - [ ] None of the above 
 
 **(LC8.6) Before conducting PCA, how can you test the sampling adequacy of your data (i.e., how suited your data is for Factor Analysis)?**
 
 - [ ] Kaiser-Meyer-Olkin (KMO) test with scores <0.5
-- [x] Kaiser-Meyer-Olkin (KMO) test with scores >0.5
+- [ ] Kaiser-Meyer-Olkin (KMO) test with scores >0.5
 - [ ] By inspecting the scree plot
 - [ ] Cronbach's alpha test with scores >0.7
 - [ ] None of the above 
 
 **(LC8.7) What is communality?**
 
-- [x] Proportion of common variance in a variable
+- [ ] Proportion of common variance in a variable
 - [ ] Variance that is unique to a particular variable
 - [ ] Proportion of unique variance in a variable
 - [ ] Covariance between two factors
@@ -1456,13 +1466,13 @@ head(test_data)
 **(LC8.8) Orthogonal factor rotation assumes:**
 
 - [ ] Inter-correlated factors
-- [x] Uncorrelated factors
+- [ ] Uncorrelated factors
 - [ ] Outer-correlated factors
 - [ ] None of the above 
 
 **(LC8.9) Imagine you want to conduct a PCA on 10 variables without factor rotation and in a first step, you wish to find out how many components you should extract. How would the corresponding R Code look?**
 
-- [x] `principal(data, nfactors = 10, rotate = "none")`
+- [ ] `principal(data, nfactors = 10, rotate = "none")`
 - [ ] `principal(data, nfactors = “varimax”, rotate = 10)`
 - [ ] `principal(data, nfactors = 10, rotate = "oblimin")`
 - [ ] `principal(data, nfactors = 10, rotate = "varimax")`
@@ -1473,7 +1483,7 @@ head(test_data)
 - [ ] Validity (i.e. “consistency”) requires the absence of random errors
 - [ ] Reliability (i.e. “truthfulness") requires the absence of measurement errors
 - [ ] Validity describes the extent to which a scale produces consistent results in repeated measurements
-- [x] None of the above 
+- [ ] None of the above 
 
 
 

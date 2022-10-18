@@ -17,7 +17,6 @@ output:
 
 In this section, we provide answers to questions that students of previous cohorts encountered. We grouped the answers by topic and hope that you will find the answers useful.  
 
-
 ## Common error messages
 
 <img src="./images/off_on.jpg" width="40%" style="display: block; margin: auto;" />
@@ -37,6 +36,10 @@ This means that a general procedure for dealing with errors that cannot be solve
 7. Nothing helped: Ask in the forum. If possible with a screenshot that explains your issue, or - better yet - a [minimal reproducible example](https://community.rstudio.com/t/faq-how-to-do-a-minimal-reproducible-example-reprex-for-beginners/23061). 
 
 In the following capitalized words are stand-ins for specific calls/symbols/functions.
+
+### Errors, warnings, and messages
+
+Not all messages we are shown in R are *errors*. When we get an error at least one of the lines we ran could not be run at all and we should go back and try to fix the error. However, there are also *warnings*. Warnings start with **Warning message:...** and indicate that something has gone wrong but the code could still be executed. Usually we can ignore warnings but be cautious and make sure the output of the code resulting in a warning is correct. An example of a situation in which we get a warning is when we try to calculate the `mean` of a character vector. The code will still work and return an r`NA` since the mean is not defined for characters. Finally, there are also messages which inform us that something is happening (e.g., during a long computation) and we can safely ignore them.
 
 ### Error in file(file, "rt"): cannot open the connection {-}
 
@@ -68,7 +71,7 @@ print("hello"))
 ```
 
 ```
-## Error: <text>:1:15: Unerwartete(s) ')'
+## Error: <text>:1:15: unexpected ')'
 ## 1: print("hello"))
 ##                   ^
 ```
@@ -80,7 +83,7 @@ There is one too many closing parenthesis here.
 ```
 
 ```
-## Error: <text>:1:4: Unerwartete(s) '/'
+## Error: <text>:1:4: unexpected '/'
 ## 1: 1 +/
 ##        ^
 ```
@@ -92,7 +95,7 @@ The "/" symbol may not follow the "+" symbol without any additional objects.
 ```
 
 ```
-## Error: <text>:1:3: unerwartete numerische Konstante
+## Error: <text>:1:3: unexpected numeric constant
 ## 1: 1 2
 ##       ^
 ```
@@ -105,7 +108,7 @@ x <- 3
 ```
 
 ```
-## Error: <text>:2:2: unerwartetes Symbol
+## Error: <text>:2:2: unexpected symbol
 ## 1: x <- 3
 ## 2: 2x
 ##     ^
@@ -134,7 +137,7 @@ mean$value
 ```
 
 ```
-## Error in mean$value: Objekt des Typs 'closure' ist nicht indizierbar
+## Error in mean$value: object of type 'closure' is not subsettable
 ```
 
 instead of (i.e., correcting for the missing "s" to identify the data frame by its name)
@@ -158,7 +161,7 @@ summary(aov)[[1]]
 ```
 
 ```
-## Error in object[[i]]: Objekt des Typs 'closure' ist nicht indizierbar
+## Error in object[[i]]: object of type 'closure' is not subsettable
 ```
 
 Make sure all the relevant code is run first:
@@ -211,7 +214,7 @@ mean(xdf$a, xdf$group)
 ```
 
 ```
-## Error in mean.default(xdf$a, xdf$group): 'trim' muss nummerisch sein und Länge 1 haben
+## Error in mean.default(xdf$a, xdf$group): 'trim' must be numeric of length one
 ```
 
 When you get this error make sure your data is in the format you expect it to be (e.g., using the `str` function). And that missing values (i.e., NA) are handles appropriately. 
@@ -244,7 +247,7 @@ This error occurs if a function name is either misspelled or some packages have 
 
 
 ```
-## Error in detach(package:ggplot2): ungültiges 'name'Argument
+## Error in detach(package:ggplot2): invalid 'name' argument
 ```
 
 
@@ -253,7 +256,7 @@ ggplot(data)
 ```
 
 ```
-## Error in ggplot(data): konnte Funktion "ggplot" nicht finden
+## Error in ggplot(data): could not find function "ggplot"
 ```
 
 If you are not sure which package provides a given function, try running:
@@ -273,7 +276,7 @@ x[1,1]
 ```
 
 ```
-## Error in x[1, 1]: falsche Anzahl von Dimensionen
+## Error in x[1, 1]: incorrect number of dimensions
 ```
 
 
@@ -435,7 +438,7 @@ glm(char_y ~ x , data = dat, family=binomial())
 ```
 
 ```
-## Error in weights * y: nicht-numerisches Argument für binären Operator
+## Error in weights * y: non-numeric argument to binary operator
 ```
 
 ## General settings and options
