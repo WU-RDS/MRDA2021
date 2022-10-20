@@ -349,8 +349,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="r-markdown.html"><a href="r-markdown.html#r-code"><i class="fa fa-check"></i>R-Code</a></li>
 <li class="chapter" data-level="" data-path="r-markdown.html"><a href="r-markdown.html#latex-math"><i class="fa fa-check"></i>LaTeX Math</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="r-markdown.html"><a href="r-markdown.html#solution-assignment-2"><i class="fa fa-check"></i><b>10.2</b> Solution assignment 2</a></li>
-<li class="chapter" data-level="10.3" data-path="r-markdown.html"><a href="r-markdown.html#solution-assignment-3"><i class="fa fa-check"></i><b>10.3</b> Solution assignment 3</a></li>
 </ul></li>
 <li class="part"><span><b>IV Group project</b></span></li>
 <li class="chapter" data-level="11" data-path="survey-design-analysis.html"><a href="survey-design-analysis.html"><i class="fa fa-check"></i><b>11</b> Survey design &amp; analysis</a>
@@ -2304,7 +2302,7 @@ f(\mathbf{X}) = P(y_i = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 * x_{1,i} + \be
 <p>The coefficients of the model give the change in the <a href="https://en.wikipedia.org/wiki/Odds#Statistical_usage">log odds</a> of the dependent variable due to a unit change in the regressor. This makes the exact interpretation of the coefficients difficult, but we can still interpret the signs and the p-values which will tell us if a variable has a significant positive or negative impact on the probability of the dependent variable being <span class="math inline">\(1\)</span>. In order to get the odds ratios we can simply take the exponent of the coefficients.</p>
 <div class="sourceCode" id="cb624"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb624-1"><a href="regression.html#cb624-1" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(<span class="fu">coef</span>(logit_model ))</span></code></pre></div>
 <pre><code>##          (Intercept)         danceability 
-##        0.00004355897 26532731.71142430231</code></pre>
+##        0.00004355897 26532731.71142345294</code></pre>
 <p>Notice that the coefficient is extremely large. That is (partly) due to the fact that the danceability variable is constrained to values between <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span> and the coefficients are for a unit change. We can make the “unit-change” interpretation more meaningful by multiplying the danceability index by <span class="math inline">\(100\)</span>. This linear transformation does not affect the model fit or the p-values.</p>
 <div class="sourceCode" id="cb626"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb626-1"><a href="regression.html#cb626-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Re-scale independet variable</span></span>
 <span id="cb626-2"><a href="regression.html#cb626-2" aria-hidden="true" tabindex="-1"></a>chart_data<span class="sc">$</span>danceability_100 <span class="ot">&lt;-</span> chart_data<span class="sc">$</span>danceability<span class="sc">*</span><span class="dv">100</span> </span>
